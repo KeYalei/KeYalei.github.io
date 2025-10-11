@@ -71,6 +71,11 @@
                                 <button class="btn btn-outline-success btn-lg" data-bs-toggle="modal" data-bs-target="#wechatModal">
                                     <i class="fab fa-weixin me-2"></i>Contact via WeChat
                                 </button>
+                                
+                                <!-- Address Contact Button -->
+                                <button class="btn btn-outline-info btn-lg" data-bs-toggle="modal" data-bs-target="#addressModal">
+                                    <i class="bi bi-geo-alt-fill me-2"></i>Address
+                                </button>
                             </div>
                         </div>
                           
@@ -107,18 +112,49 @@
         <!-- WeChat Modal -->
         <div class="modal fade" id="wechatModal" tabindex="-1" aria-labelledby="wechatModalLabel" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content text-center">
+            <div class="modal-content text-center p-3">
               <div class="modal-header border-0">
-                <h5 class="modal-title" id="wechatModalLabel">Scan to Add on WeChat</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <h5 class="modal-title w-100" id="wechatModalLabel">WeChat QR Code</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="关闭"></button>
               </div>
               <div class="modal-body">
-                <img src="assets/wechat.jpg" alt="WeChat QR Code" class="img-fluid rounded-3" style="max-width: 250px;">
+                <p class="mb-2">Scan to Add on WeChat</p>
+                <img src="assets/wechat.jpg" alt="WeChat QR Code" class="img-fluid rounded shadow-sm" style="max-width: 250px;">
               </div>
             </div>
           </div>
         </div>
-    
+
+        <!-- Address Modal -->
+        <div class="modal fade" id="addressModal" tabindex="-1" aria-labelledby="addressModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header border-0">
+                        <h5 class="modal-title w-100 text-center" id="addressModalLabel">
+                            <i class="bi bi-geo-alt-fill text-info me-2"></i>Address
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-center py-4">
+                        <div class="mb-3">
+                            <a href="https://www.bjmu.edu.cn/" target="_blank" class="text-decoration-none fw-bold fs-5">
+                                Peking University Health Science Center
+                            </a>
+                        </div>
+                        <div class="text-muted">
+                            38, Xueyuan Road, Haidian District<br>
+                            Beijing, 100191<br>
+                            China
+                        </div>
+                    </div>
+                    <div class="modal-footer border-0 justify-content-center">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <a href="https://www.bjmu.edu.cn/" target="_blank" class="btn btn-primary">Visit Website</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
         <!-- Scripts -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <script src="js/scripts.js"></script>
