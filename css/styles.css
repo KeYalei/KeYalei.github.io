@@ -11749,3 +11749,47 @@ html {
 .btn-links .btn {
     border-radius: 20px;
 }
+
+.new-class {
+  color: var(--bs-primary);      
+  background-color: var(--bs-secondary); 
+  font-family: var(--bs-font-sans-serif); 
+}
+
+.custom-btn
+.section-heading
+.card-custom
+
+
+/* 自定义卡片样式 */
+.card-custom {
+  border: none;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+/* 自定义按钮变体 */
+.btn-gradient {
+  background: linear-gradient(45deg, var(--bs-primary), var(--bs-secondary));
+  border: none;
+  color: white;
+}
+
+/* 文字颜色 */
+.text-gradient {
+  background: linear-gradient(45deg, var(--bs-primary), var(--bs-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* 自定义间距 */
+.mt-6 { margin-top: 4rem; }
+.mb-6 { margin-bottom: 4rem; }
+
+/* 悬停动画 */
+.hover-lift {
+  transition: transform 0.3s ease;
+}
+.hover-lift:hover {
+  transform: translateY(-5px);
+}
