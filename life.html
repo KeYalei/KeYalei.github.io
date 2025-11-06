@@ -19,8 +19,9 @@
         <style>
             .photo-grid {
                 display: grid;
-                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
                 grid-gap: 1rem;
+                grid-auto-rows: 200px;
                 grid-auto-flow: dense;
             }
             
@@ -42,23 +43,29 @@
                 display: block;
             }
             
-            .photo-large {
+            /* 响应式网格调整 */
+            .photo-item.landscape {
                 grid-column: span 2;
+            }
+            
+            .photo-item.portrait {
                 grid-row: span 2;
             }
             
-            .photo-wide {
+            .photo-item.large {
                 grid-column: span 2;
-            }
-            
-            .photo-tall {
                 grid-row: span 2;
             }
             
             @media (max-width: 768px) {
-                .photo-large,
-                .photo-wide,
-                .photo-tall {
+                .photo-grid {
+                    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+                    grid-auto-rows: 150px;
+                }
+                
+                .photo-item.landscape,
+                .photo-item.portrait,
+                .photo-item.large {
                     grid-column: span 1;
                     grid-row: span 1;
                 }
@@ -103,35 +110,53 @@
                     
                     <!-- Photo Gallery -->
                     <div class="photo-grid">
-                        <div class="photo-item photo-large">
+                        <div class="photo-item landscape">
                             <img src="life/1.jpg" alt="Life moment 1" loading="lazy">
                         </div>
-                        <div class="photo-item">
+                        <div class="photo-item portrait">
                             <img src="life/2.jpg" alt="Life moment 2" loading="lazy">
                         </div>
-                        <div class="photo-item photo-wide">
+                        <div class="photo-item">
                             <img src="life/3.jpg" alt="Life moment 3" loading="lazy">
                         </div>
-                        <div class="photo-item photo-tall">
+                        <div class="photo-item large">
                             <img src="life/4.jpg" alt="Life moment 4" loading="lazy">
                         </div>
                         <div class="photo-item">
                             <img src="life/5.jpg" alt="Life moment 5" loading="lazy">
                         </div>
-                        <div class="photo-item photo-large">
+                        <div class="photo-item landscape">
                             <img src="life/6.jpg" alt="Life moment 6" loading="lazy">
                         </div>
-                        <div class="photo-item">
+                        <div class="photo-item portrait">
                             <img src="life/7.jpg" alt="Life moment 7" loading="lazy">
                         </div>
-                        <div class="photo-item photo-wide">
+                        <div class="photo-item">
                             <img src="life/8.jpg" alt="Life moment 8" loading="lazy">
                         </div>
-                        <div class="photo-item photo-tall">
+                        <div class="photo-item large">
                             <img src="life/9.jpg" alt="Life moment 9" loading="lazy">
                         </div>
                         <div class="photo-item">
                             <img src="life/10.jpg" alt="Life moment 10" loading="lazy">
+                        </div>
+                        <div class="photo-item landscape">
+                            <img src="life/11.jpg" alt="Life moment 11" loading="lazy">
+                        </div>
+                        <div class="photo-item">
+                            <img src="life/12.jpg" alt="Life moment 12" loading="lazy">
+                        </div>
+                        <div class="photo-item portrait">
+                            <img src="life/13.jpg" alt="Life moment 13" loading="lazy">
+                        </div>
+                        <div class="photo-item">
+                            <img src="life/14.jpg" alt="Life moment 14" loading="lazy">
+                        </div>
+                        <div class="photo-item landscape">
+                            <img src="life/15.jpg" alt="Life moment 15" loading="lazy">
+                        </div>
+                        <div class="photo-item">
+                            <img src="life/16.jpg" alt="Life moment 16" loading="lazy">
                         </div>
                     </div>
                 </div>
