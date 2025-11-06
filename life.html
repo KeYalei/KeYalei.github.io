@@ -16,6 +16,54 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <style>
+            .photo-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                grid-gap: 1rem;
+                grid-auto-flow: dense;
+            }
+            
+            .photo-item {
+                overflow: hidden;
+                border-radius: 8px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s ease;
+            }
+            
+            .photo-item:hover {
+                transform: scale(1.03);
+            }
+            
+            .photo-item img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+            }
+            
+            .photo-large {
+                grid-column: span 2;
+                grid-row: span 2;
+            }
+            
+            .photo-wide {
+                grid-column: span 2;
+            }
+            
+            .photo-tall {
+                grid-row: span 2;
+            }
+            
+            @media (max-width: 768px) {
+                .photo-large,
+                .photo-wide,
+                .photo-tall {
+                    grid-column: span 1;
+                    grid-row: span 1;
+                }
+            }
+        </style>
     </head>
     <body class="d-flex flex-column h-100 bg-light">
         <main class="flex-shrink-0">
@@ -45,17 +93,45 @@
             </nav>
 
 
-            <!-- Projects Section-->
+            <!-- Life Section with Photo Gallery -->
             <section class="py-5">
                 <div class="container px-5 mb-5">
                     <div class="text-center mb-5">
-                        <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">Under construction...</span></h1>
+                        <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">Moments in Life</span></h1>
+                        <p class="lead text-muted mt-3">Capturing precious memories and experiences</p>
                     </div>
-                    <div class="row gx-5 justify-content-center">
-                        <div class="col-lg-11 col-xl-9 col-xxl-8">
-
-                            
-                            
+                    
+                    <!-- Photo Gallery -->
+                    <div class="photo-grid">
+                        <div class="photo-item photo-large">
+                            <img src="life/1.jpg" alt="Life moment 1" loading="lazy">
+                        </div>
+                        <div class="photo-item">
+                            <img src="life/2.jpg" alt="Life moment 2" loading="lazy">
+                        </div>
+                        <div class="photo-item photo-wide">
+                            <img src="life/3.jpg" alt="Life moment 3" loading="lazy">
+                        </div>
+                        <div class="photo-item photo-tall">
+                            <img src="life/4.jpg" alt="Life moment 4" loading="lazy">
+                        </div>
+                        <div class="photo-item">
+                            <img src="life/5.jpg" alt="Life moment 5" loading="lazy">
+                        </div>
+                        <div class="photo-item photo-large">
+                            <img src="life/6.jpg" alt="Life moment 6" loading="lazy">
+                        </div>
+                        <div class="photo-item">
+                            <img src="life/7.jpg" alt="Life moment 7" loading="lazy">
+                        </div>
+                        <div class="photo-item photo-wide">
+                            <img src="life/8.jpg" alt="Life moment 8" loading="lazy">
+                        </div>
+                        <div class="photo-item photo-tall">
+                            <img src="life/9.jpg" alt="Life moment 9" loading="lazy">
+                        </div>
+                        <div class="photo-item">
+                            <img src="life/10.jpg" alt="Life moment 10" loading="lazy">
                         </div>
                     </div>
                 </div>
@@ -89,4 +165,3 @@
         <script src="js/scripts.js"></script>
     </body>
 </html>
-
